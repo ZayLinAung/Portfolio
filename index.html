@@ -6,13 +6,22 @@
 -->
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>Zay Lin Aung — Software Engineer</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/theme-bw.css" />
 
     <link
       rel="stylesheet"
@@ -28,7 +37,6 @@
         <div class="inner">
           <!-- Header -->
           <header id="header">
-            <a href="index.html" class="logo"><strong>Portfolio</strong></a>
             <ul class="icons">
               <li>
                 <a
@@ -77,15 +85,14 @@
           <section id="banner">
             <div class="content">
               <header>
-                <h1>Hi, I'm<br />Zay Lin Aung</h1>
-                <p>Computer Science at University of Toronto</p>
+                <p class="banner-eyebrow">Software Engineer</p>
+                <h1>Zay Lin Aung</h1>
+                <p class="banner-role">Computer Science &middot; University of Toronto</p>
               </header>
-              <p>
-                <span>
-                  An undergraduate student at University of Toronto specializing in Software
-                  Engineering and Statistics minor. Strong interest in backend, computer systems, Deep Learning and Agentic Engineering.
-                </span>
-                <br />
+              <p class="banner-lead">
+                Undergraduate specializing in Software Engineering with a
+                Statistics minor. Focused on backend systems, distributed
+                infrastructure, deep learning, and agentic engineering.
               </p>
               <ul class="actions">
                 <li>
@@ -190,52 +197,66 @@
               <div class="experience-item">
                 <div class="experience-header">
                   <div class="experience-title">
-                    <h3>Forward Deployed Engineer Intern <span class="experience-badge">Incoming</span></h3>
-                    <span class="experience-company">Cresta &mdash; Toronto, ON</span>
+                    <img class="experience-logo" src="images/logo_cresta.png" alt="Cresta logo" />
+                    <div class="experience-title-text">
+                      <h3>Forward Deployed Engineer Intern</h3>
+                      <span class="experience-company">Cresta &mdash; Sunnyvale, CA</span>
+                    </div>
                   </div>
                   <span class="experience-date">May 2026 &ndash; Aug 2026</span>
                 </div>
                 <ul>
-                  <li>Will be collaborating cross-functionally with internal teams (chat/voice integration, infrastructure, AI runtime, and tooling) to build AI agents for end customers.</li>
+                  <li>Owned end-to-end delivery of customer-facing AI agents, tailored to domain-specific workflows through LLM orchestration, tool integrations, and iterative collaboration with stakeholders.</li>
+                  <li>Built custom MCP servers within customer environments and automated web ingestion pipelines to enable reliable RAG retrieval over domain-specific knowledge data.</li>
+                  <li>Enhanced agent runtime and platform services by deploying containerized execution environments in AWS, improving scalability, and low-latency agent performance under high-demand workloads.</li>
                 </ul>
               </div>
 
               <div class="experience-item">
                 <div class="experience-header">
                   <div class="experience-title">
-                    <h3>AI Innovation Developer Intern</h3>
-                    <span class="experience-company">RBC &mdash; Toronto, ON</span>
+                    <img class="experience-logo" src="images/logo_rbc.png" alt="RBC logo" />
+                    <div class="experience-title-text">
+                      <h3>AI Engineer Intern</h3>
+                      <span class="experience-company">RBC Capital Markets &mdash; Toronto, ON</span>
+                    </div>
                   </div>
                   <span class="experience-date">Jan 2026 &ndash; Apr 2026</span>
                 </div>
                 <ul>
-                  <li>Designed and built an asynchronous agentic workflow system leveraging structured knowledge retrieval to deliver reliable analytical outputs and support high-throughput agent execution.</li>
-                  <li>Collaborated with domain experts to automate business workflows using prompt and context engineering across multiple foundation models, optimizing pipelines and reducing token usage through benchmarking.</li>
-                  <li>Developed multi-agent orchestration pipelines using LangGraph, implementing dependency-aware execution to coordinate complex workflows for internal compliance use cases.</li>
+                  <li>Designed and implemented asynchronous multi-agent workflows using LangGraph and structured knowledge retrieval, enabling dependency-aware execution for high-throughput agent systems.</li>
+                  <li>Experimented fine-tuning open-weight language models using parameter-efficient fine-tuning (QLoRA) techniques to align model behavior with internal business compliance, collaborating with domain experts for benchmarking.</li>
+                  <li>Deployed a centralized LLM API gateway with concurrency control, rate limiting, and response caching to enable scalable inference while optimizing token usage.</li>
                 </ul>
               </div>
 
               <div class="experience-item">
                 <div class="experience-header">
                   <div class="experience-title">
-                    <h3>Software Developer Intern (Backend)</h3>
-                    <span class="experience-company">Kinaxis &mdash; Ottawa, ON</span>
+                    <img class="experience-logo" src="images/logo_kinaxis.png" alt="Kinaxis logo" />
+                    <div class="experience-title-text">
+                      <h3>Software Developer Intern (Backend)</h3>
+                      <span class="experience-company">Kinaxis &mdash; Ottawa, ON</span>
+                    </div>
                   </div>
                   <span class="experience-date">Jan 2025 &ndash; Aug 2025</span>
                 </div>
                 <ul>
                   <li>Contributed to the design and implementation of a Query Orchestrator to enable horizontal scaling of query workers, achieving parallel query execution and reducing average query latency by 30%.</li>
-                  <li>Engineered efficient synchronization mechanisms between the application server and distributed data servers using gRPC and FlatBuffers, ensuring consistent state propagation and low-latency communication.</li>
-                  <li>Developed a robust subsystem-level testing framework with Go, Docker, and Kubernetes, increasing automated test coverage from 55% to 85% and enabling faster, isolated integration testing.</li>
-                  <li>Integrated a fully automated CI/CD pipeline enforcing subsystem test runs on pull requests, leveraging JFrog Artifactory for secure container image management and reducing build times by 40%.</li>
+                  <li>Engineered efficient synchronization mechanisms between the application server and distributed data servers using gRPC and FlatBuffers, ensuring consistent state propagation.</li>
+                  <li>Developed a robust subsystem-level testing framework with Go, Docker, and Kubernetes, increasing automated test coverage from 55% to 85% and enabling faster, isolated integration testing in containerized environments.</li>
+                  <li>Integrated a fully automated CI/CD pipeline enforcing subsystem test runs on pull requests, leveraging JFrog Artifactory for secure container image management and caching to reduce build times by 40%.</li>
                 </ul>
               </div>
 
               <div class="experience-item">
                 <div class="experience-header">
                   <div class="experience-title">
-                    <h3>Full-Stack / ML Developer</h3>
-                    <span class="experience-company">KnockRI &mdash; Toronto, ON</span>
+                    <img class="experience-logo" src="images/logo_knockri.png" alt="KnockRI logo" />
+                    <div class="experience-title-text">
+                      <h3>Full-Stack / ML Developer</h3>
+                      <span class="experience-company">KnockRI &mdash; Toronto, ON</span>
+                    </div>
                   </div>
                   <span class="experience-date">Sep 2024 &ndash; Dec 2024</span>
                 </div>
@@ -243,21 +264,6 @@
                   <li>Designed an end-to-end prompt engineering workflow using Azure AI Foundry to generate synthetic training data, reducing manual data collection costs and increasing labeling throughput by over 500%.</li>
                   <li>Implemented knowledge distillation and rule-based matching techniques to stabilize probabilistic LLM outputs, achieving consistent and reproducible results in automated content analysis pipelines.</li>
                   <li>Participated in weekly progress meetings and prepared performance reports, incorporating feedback through iterative development cycles to ensure continuous workflow improvement.</li>
-                </ul>
-              </div>
-
-              <div class="experience-item">
-                <div class="experience-header">
-                  <div class="experience-title">
-                    <h3>Software Engineering Fellow</h3>
-                    <span class="experience-company">Headstarter &mdash; Remote</span>
-                  </div>
-                  <span class="experience-date">Jun 2024 &ndash; Aug 2024</span>
-                </div>
-                <ul>
-                  <li>Developed a local event discovery platform using Next.js, Firebase, Clerk, Stripe, and Vercel, implementing end-to-end authentication, payment integration, and deployment under Agile weekly sprints.</li>
-                  <li>Engineered an automated web scraper to extract instructor data from Rate My Professor and continuously update a Pinecone vector index, enabling real-time RAG responses powered by LangChain and Gemini.</li>
-                  <li>Gained hands-on experience in the startup lifecycle by learning marketing strategies, conducting user outreach, and iterating on feedback to validate product-market fit.</li>
                 </ul>
               </div>
 
@@ -269,192 +275,170 @@
             <header class="major">
               <h2>Projects</h2>
             </header>
-            <div class="posts">
-              <article>
-                <a
-                  href="https://ai-rate-my-prof-murex.vercel.app/"
-                  target="blank"
-                  class="image"
-                  ><img src="images/RateProf.png" alt=""
-                /></a>
-                <h3><a href = "https://ai-rate-my-prof-murex.vercel.app/" target = "blank">Rate my Professor</a></h3>
-                <p>
-                  Make an informed and educated decision on your next course by 
-                  using Rate My Professor AI. This web application uses AI with knowledge-based (RAG)
-                  language model to generate reviews for professors. By using web scraping, it dynamically 
-                  imports data from ratemyprofessors.com to pinecone vector database.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/ZayLinAung/AI-Rate-my-Prof"
-                      class="button"
-                      target="blank"
-                      >More</a
-                    >
-                  </li>
+            <div class="project-grid">
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3>Pintos Operating System</h3>
+                  <span class="project-date">May 2026</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">C</span>
+                  <span class="project-tag">Linux</span>
+                  <span class="project-tag">Operating Systems</span>
+                </div>
+                <ul>
+                  <li>Implemented kernel threading, process management, and synchronization primitives &mdash; including priority scheduling, priority donation, alarms, locks, and semaphores &mdash; to ensure correct concurrent execution.</li>
+                  <li>Built virtual memory support with demand paging, frame allocation, page replacement, stack growth, swap management, and memory-mapped files for efficient user process execution.</li>
+                  <li>Extended the file system with indexed inodes, hierarchical directories, a buffer cache, and fine-grained synchronization.</li>
                 </ul>
               </article>
-              <article>
-                <a
-                  href="https://flashcard-stripe-ruddy.vercel.app/"
-                  target="blank"
-                  class="image"
-                  ><img src="images/CramIt.png" alt=""
-                /></a>
-                <h3>
-                  <a
-                    href="https://flashcard-stripe-ruddy.vercel.app/"
-                    target="blank"
-                    >CramIt</a
-                  >
-                </h3>
-                <p>
-                  CramIt is a web application that uses AI to generate
-                  flashcards for students. It uses the Gemini model to generate
-                  flashcards based on the user's input using RAG for knowledge
-                  based LLM. The user can then save the flashcards to their
-                  account (firebase) and review them later. Clerk is used for
-                  authentication and Stripe for payment.
-                </p>
-                <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/ZayLinAung/AI-Flashcard"
-                      class="button"
-                      target="blank"
-                      >More</a
-                    >
-                  </li>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3>Intersync</h3>
+                  <span class="project-date">Dec 2025</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">WebRTC</span>
+                  <span class="project-tag">Compiler</span>
+                  <span class="project-tag">GCP</span>
+                  <span class="project-tag">P2P</span>
+                  <span class="project-tag">PGVector</span>
+                </div>
+                <ul>
+                  <li>Implemented low-latency P2P video streaming using WebRTC and secure code execution via SSH-connected virtual machines.</li>
+                  <li>Added AI-powered interview summarization and vector-based semantic search for candidate resume analysis.</li>
                 </ul>
               </article>
-              <article>
-                <a
-                  href="https://devpost.com/software/ezspeech"
-                  target="blank"
-                  class="image"
-                  ><img src="images/EZSpeech.png" alt=""
-                /></a>
-                <h3>EZSpeech</h3>
-                <p>
-                  EZSpeech aims to bridge language barriers, fostering stronger
-                  communities through enhanced communication. Moreover, EZSpeech
-                  facilitates the rapid dissemination of information across
-                  borders, enhancing global connectivity and collaboration.
-                </p>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3><a href="https://github.com/ZayLinAung/CSCC43-Project" target="blank">Stock Network</a></h3>
+                  <span class="project-date">Dec 2025</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">AWS</span>
+                  <span class="project-tag">Redis</span>
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">Next.js</span>
+                  <span class="project-tag">PostgreSQL</span>
+                </div>
+                <ul>
+                  <li>Built and deployed a full-stack stock analytics platform on AWS EC2, optimizing PostgreSQL queries and integrating Redis caching to accelerate historical data retrieval, portfolio analytics, and social features.</li>
+                  <li>Implemented Holt&ndash;Winters Exponential Smoothing for future stock price prediction and cached computationally expensive analytics (variance, covariance, Beta, forecasts) using Redis and Elasticsearch-style search patterns for fast, scalable performance.</li>
+                </ul>
                 <ul class="actions">
-                  <li>
-                    <a
-                      href="https://devpost.com/software/ezspeech"
-                      class="button"
-                      target="blank"
-                      >More</a
-                    >
-                  </li>
+                  <li><a href="https://github.com/ZayLinAung/CSCC43-Project" target="blank" class="button small">View</a></li>
                 </ul>
               </article>
-              <article>
-                <a
-                  href="https://github.com/ZayLinAung/AI-Earth-Hack-Submission"
-                  target="blank"
-                  class="image"
-                  ><img src="images/sustainableChef.png" alt=""
-                /></a>
-                <h3>Sustainable Chef</h3>
-                <p>
-                  A personal AI chef that tells you how to create your favorite
-                  dishes with sustainable ingredients and steps. Using
-                  Generative AI, AI Chef devises a recipe for the specified food
-                  with sustainability and low waste in mind.
-                </p>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3><a href="https://github.com/ZayLinAung/Socket-Programming" target="blank">MOAB Battleship Server</a></h3>
+                  <span class="project-date">Jun 2025</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">C</span>
+                  <span class="project-tag">Linux Sockets</span>
+                  <span class="project-tag">Epoll</span>
+                  <span class="project-tag">Network Programming</span>
+                  <span class="project-tag">Signals</span>
+                </div>
+                <ul>
+                  <li>Developed a high-performance multiplayer game server using TCP/IP network sockets and epoll for concurrent I/O multiplexing, supporting real-time communication among multiple clients.</li>
+                  <li>Engineered asynchronous message broadcasting and implemented robust error handling to ensure reliable performance under fluctuating network conditions.</li>
+                  <li>Designed and tested client&ndash;server protocols for efficient data exchange, demonstrating strong knowledge of low-level networking and concurrency.</li>
+                </ul>
                 <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/ZayLinAung/AI-Earth-Hack-Submission"
-                      target="blank"
-                      class="button"
-                      >More</a
-                    >
-                  </li>
+                  <li><a href="https://github.com/ZayLinAung/Socket-Programming" target="blank" class="button small">View</a></li>
                 </ul>
               </article>
-              <article>
-                <a
-                  href="https://github.com/ZayLinAung/CS50/tree/main/CS50%20Web/Emosupport"
-                  target="blank"
-                  class="image"
-                  ><img src="images/Spotify.png" alt=""
-                /></a>
-                <h3>Mood Sync AI</h3>
-                <p>
-                  A web application that generates playlist depending on how the
-                  user is feeling. It uses prompt engineering to train GPT model
-                  and parse the output to Spotify.
-                </p>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3><a href="https://devpost.com/software/saids-smart-aleart-intrusion-detection-system" target="blank">Smart IDS</a> <span class="experience-badge">HTV9 Best Cybersecurity Hack</span></h3>
+                  <span class="project-date">Oct 2024</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">IDS</span>
+                  <span class="project-tag">LLM</span>
+                  <span class="project-tag">TypeScript</span>
+                  <span class="project-tag">Flask</span>
+                  <span class="project-tag">Socket.io</span>
+                </div>
+                <ul>
+                  <li>Collaborated in a team of 4 to build a web-based security app that enhanced traditional IDS with the Gemini LLM for advanced threat detection.</li>
+                  <li>Integrated React and TypeScript for the alert interface, processed network logs stored in Firebase using Python Flask, Socket.io, and the Gemini API, and configured Snort for real-time network traffic monitoring.</li>
+                  <li>Simulated a UDP DoS attack using Tcpreplay to demonstrate the IDS's ability to quickly detect and alert users about malicious activity, accelerating incident response.</li>
+                </ul>
                 <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/ZayLinAung/CS50/tree/main/CS50%20Web/Emosupport"
-                      target="blank"
-                      class="button"
-                      >More</a
-                    >
-                  </li>
+                  <li><a href="https://devpost.com/software/saids-smart-aleart-intrusion-detection-system" target="blank" class="button small">View</a></li>
                 </ul>
               </article>
-              <article>
-                <a
-                  href="https://github.com/ZayLinAung/Davinci-Project"
-                  target="blank"
-                  class="image"
-                  ><img src="images/union.png" alt=""
-                /></a>
-                <h3>Union (Start-up Winner Project)</h3>
-                <p>
-                  UNION is an app designed to help first-year and transfer
-                  university students connect with their peers. By matching
-                  users based on their university, program, courses, and
-                  interests, UNION aims to foster a more inclusive and connected
-                  university community. It’s an essential tool for students
-                  seeking to build meaningful connections and integrate smoothly
-                  into campus life.
-                </p>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3><a href="https://github.com/ZayLinAung/CarbonFoodPrintApp" target="blank">Carbon Footprint Tracker</a></h3>
+                  <span class="project-date">Sep 2024</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">Android Studio</span>
+                  <span class="project-tag">JUnit</span>
+                  <span class="project-tag">Mockito</span>
+                </div>
+                <ul>
+                  <li>Architected and implemented a full-stack Android application in Java that tracks users' daily food, energy, transport, and shopping inputs to compute real-time CO&#8322; emissions, providing personalized insights into sustainable lifestyle habits.</li>
+                  <li>Collaborated with a 6-member development team following Agile SDLC practices to design, document, and refine core modules.</li>
+                  <li>Developed and automated unit tests using JUnit and Mockito, achieving comprehensive code coverage and ensuring functional correctness across key features.</li>
+                </ul>
                 <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/ZayLinAung/Davinci-Project"
-                      target="blank"
-                      class="button"
-                      >More</a
-                    >
-                  </li>
+                  <li><a href="https://github.com/ZayLinAung/CarbonFoodPrintApp" target="blank" class="button small">View</a></li>
                 </ul>
               </article>
-              <article>
-                <a
-                  href="https://github.com/ZayLinAung/Hack-the-Valley"
-                  target="blank"
-                  class="image"
-                  ><img src="images/AirQuality.png" alt=""
-                /></a>
-                <h3>Air Quality Indexing</h3>
-                <p>
-                  A simple website that shows the air quality data of any
-                  location worldwide requested by the client. The data includes
-                  Carbon Monoxide, Nitrogen Dioxide, Ozone, Sulphur Dioxide, and
-                  Particulate Matter 2.5 and 1.0.
-                </p>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3><a href="https://devpost.com/software/ezspeech" target="blank">EZSpeech</a></h3>
+                  <span class="project-date">Mar 2024</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">Google Cloud APIs</span>
+                  <span class="project-tag">Gemini</span>
+                  <span class="project-tag">Flask</span>
+                </div>
+                <ul>
+                  <li>Developed a multilingual speech assistant leveraging Google Cloud Speech-to-Text, Text-to-Speech, and NLP APIs integrated with Gemini LLMs, enabling real-time transcription, translation, and tone-adaptive responses (e.g., formal, casual, persuasive).</li>
+                  <li>Engineered a Flask backend to orchestrate API calls with intelligent caching, batching, and streaming optimizations, reducing average response latency by 35% and improving scalability for concurrent sessions.</li>
+                </ul>
                 <ul class="actions">
-                  <li>
-                    <a
-                      href="https://github.com/ZayLinAung/Hack-the-Valley"
-                      target="blank"
-                      class="button"
-                      >More</a
-                    >
-                  </li>
+                  <li><a href="https://devpost.com/software/ezspeech" target="blank" class="button small">View</a></li>
                 </ul>
               </article>
+
+              <article class="project-card">
+                <div class="project-card-head">
+                  <h3><a href="https://github.com/ZayLinAung/DS3-Datathon" target="blank">Datathon Competition</a></h3>
+                  <span class="project-date">Jan 2024</span>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Jupyter Notebook</span>
+                  <span class="project-tag">Scikit-learn</span>
+                  <span class="project-tag">PyCaret</span>
+                  <span class="project-tag">TensorFlow</span>
+                </div>
+                <ul>
+                  <li>Developed and optimized a multi-class classification model for celestial object detection using Random Forest with SMOTE for data balancing, achieving 97.38% accuracy on a 50k-sample test dataset.</li>
+                  <li>Implemented a Convolutional Neural Network (CNN) for traffic light classification, enabling real-time image-based recognition and contributing to the competition's secondary computer vision challenge.</li>
+                  <li>Ranked in the Top 10 out of 100+ teams as an all&ndash;first-year team, demonstrating strong teamwork, rapid prototyping, and applied understanding of machine learning fundamentals.</li>
+                </ul>
+                <ul class="actions">
+                  <li><a href="https://github.com/ZayLinAung/DS3-Datathon" target="blank" class="button small">View</a></li>
+                </ul>
+              </article>
+
             </div>
           </section>
         </div>
@@ -463,15 +447,21 @@
       <!-- Sidebar -->
       <div id="sidebar">
         <div class="inner">
+          <!-- Profile -->
+          <div class="sidebar-profile">
+            <span class="sidebar-name">Zay Lin Aung</span>
+            <span class="sidebar-title">Software Engineer</span>
+          </div>
+
           <!-- Menu -->
           <nav id="menu">
             <header class="major">
-              <h2>Menu</h2>
+              <h2>Navigation</h2>
             </header>
             <ul>
-              <li><a href="#banner">About Me</a></li>
-              <li><a href="#skill">Technical Skills</a></li>
-              <li><a href="#experience">Work Experience</a></li>
+              <li><a href="#banner">About</a></li>
+              <li><a href="#skill">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
               <li><a href="#project">Projects</a></li>
             </ul>
           </nav>
@@ -479,7 +469,7 @@
           <!-- Section -->
           <section>
             <header class="major">
-              <h2>Get in Touch</h2>
+              <h2>Contact</h2>
             </header>
             <ul class="contact">
               <li class="icon solid fa-envelope">

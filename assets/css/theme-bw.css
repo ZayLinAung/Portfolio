@@ -1,0 +1,549 @@
+/* =====================================================================
+   "Engineer Editorial" — professional monochrome dark theme.
+   Overrides the HTML5 UP Editorial template with a typography-led,
+   high-contrast black-and-white system (Inter + IBM Plex Mono).
+   Loaded after main.css.
+   ===================================================================== */
+
+:root {
+  --ink: #f4f4f5;          /* primary foreground */
+  --ink-soft: #c9c9cd;     /* secondary foreground */
+  --on-ink: #0a0a0a;       /* text on ink-filled surfaces */
+  --body: #a1a1a6;         /* body copy */
+  --muted: #6f6f76;        /* meta / captions */
+  --line: #232326;         /* hairline borders */
+  --line-strong: #34343a;  /* hover borders */
+  --surface: #121214;      /* cards */
+  --surface-2: #1a1a1d;    /* nested chips */
+  --page: #08080a;         /* page background */
+  --sidebar: #0d0d0f;      /* sidebar background */
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+/* ---- Base ------------------------------------------------------------ */
+html,
+body,
+#wrapper,
+#main {
+  background-color: var(--page);
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--body);
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: var(--ink);
+}
+
+strong, b { color: var(--ink); font-weight: 600; }
+
+p { color: var(--body); }
+
+hr { border-bottom-color: var(--line); }
+
+::selection { background: var(--ink); color: var(--on-ink); }
+
+/* Content column breathing room */
+#main > .inner {
+  max-width: 74rem;
+  padding: 3.5rem 3rem 4rem;
+}
+
+section + section,
+#main > .inner > section {
+  margin-top: 5rem;
+}
+
+/* ---- Links ----------------------------------------------------------- */
+a {
+  color: var(--ink);
+  border-bottom: none;
+  transition: color 0.15s ease;
+}
+
+a:hover { color: var(--ink-soft); }
+
+/* ---- Top header ------------------------------------------------------ */
+#header {
+  border-bottom: 1px solid var(--line);
+  padding: 2.5rem 0 1.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#header .logo {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+#header .logo strong { color: var(--ink); font-weight: 500; }
+
+#header .icons a { color: var(--muted); }
+#header .icons a:hover { color: var(--ink); }
+
+/* ---- Section headers: mono numbered overline ------------------------ */
+#main section > header.major {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+#main section > header.major::before {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+#skill      > header.major::before { content: "01 / Expertise"; }
+#experience > header.major::before { content: "02 / Experience"; }
+#project    > header.major::before { content: "03 / Selected Work"; }
+
+#main section > header.major > :last-child {
+  border-bottom: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* ---- Banner / hero --------------------------------------------------- */
+#banner {
+  padding: 3rem 0 4.5rem;
+  align-items: center;
+}
+
+.banner-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.1rem;
+}
+
+#banner h1 {
+  font-size: 3.75rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.banner-role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin: 0 0 1.75rem;
+}
+
+.banner-lead {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--body);
+  max-width: 34rem;
+  margin: 0 0 2.25rem;
+}
+
+#banner .image {
+  margin-left: 3.5rem;
+}
+
+#banner .image img {
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+/* ---- Buttons --------------------------------------------------------- */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  font-family: var(--font-mono);
+  background-color: transparent;
+  color: var(--ink) !important;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  height: auto;
+  line-height: 1;
+  padding: 1.05em 1.9em;
+  transition: background-color 0.18s ease, color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+  background-color: var(--ink);
+  color: var(--on-ink) !important;
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.button.big { padding: 1.15em 2.2em; font-size: 0.75rem; }
+
+.button.small {
+  padding: 0.85em 1.6em;
+  font-size: 0.66rem;
+}
+
+.button.primary {
+  background-color: var(--ink);
+  color: var(--on-ink) !important;
+  box-shadow: none;
+}
+.button.primary:hover { background-color: var(--ink-soft); }
+
+/* ---- Technical Skills ------------------------------------------------ */
+.skills-grid { gap: 1.5rem; }
+
+.skill-category {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 4px;
+  padding: 1.75rem;
+  transition: border-color 0.18s ease;
+}
+
+.skill-category:hover { border-color: var(--line-strong); }
+
+.skill-category .icon { color: var(--ink); font-size: 1.15rem; }
+
+.skill-category h3 {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.32em 0.7em;
+  font-size: 0.72rem;
+  color: var(--body);
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.skill-tag:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--on-ink);
+}
+
+/* ---- Work Experience (timeline) ------------------------------------- */
+.experience-list { gap: 2.75rem; }
+
+.experience-item {
+  border-left: 1px solid var(--line);
+  padding-left: 2rem;
+}
+
+.experience-item::before {
+  background: var(--page);
+  border: 2px solid var(--ink);
+  width: 11px;
+  height: 11px;
+  left: -6px;
+  top: 7px;
+  box-shadow: none;
+}
+
+.experience-item:hover { border-left-color: var(--line-strong); }
+
+.experience-title {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.experience-logo {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.experience-title-text { min-width: 0; }
+
+.experience-title h3 { font-size: 1.12rem; letter-spacing: -0.01em; }
+
+.experience-company {
+  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+.experience-date {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.experience-item ul { padding-left: 1.1rem; }
+
+.experience-item ul li {
+  color: var(--body);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item ul li::marker { color: var(--muted); }
+
+.experience-badge {
+  font-family: var(--font-mono);
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 3px;
+  padding: 0.25em 0.6em;
+}
+
+/* ---- Projects (image-free cards) ------------------------------------ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.75rem;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.project-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+
+.project-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.project-date {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-tag {
+  font-family: var(--font-mono);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.22em 0.6em;
+  font-size: 0.68rem;
+  color: var(--body);
+  letter-spacing: 0.01em;
+}
+
+.project-card > ul:not(.actions) {
+  margin: 0;
+  padding-left: 1.1rem;
+  flex-grow: 1;
+}
+
+.project-card > ul:not(.actions) li {
+  font-size: 0.9rem;
+  line-height: 1.62;
+  margin-bottom: 0.5rem;
+  color: var(--body);
+}
+
+.project-card > ul:not(.actions) li::marker { color: var(--muted); }
+
+.project-card .actions { margin: 1.4rem 0 0; }
+
+/* ---- Sidebar --------------------------------------------------------- */
+#sidebar { background-color: var(--sidebar); }
+#sidebar > .inner { padding: 2.75rem 2rem; }
+#sidebar > .inner:after { background-color: var(--line); }
+
+.sidebar-profile {
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidebar-name {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.sidebar-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* Sidebar section labels ("Navigation", "Contact") */
+#sidebar header.major h2 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: none !important;
+  padding: 0 !important;
+  margin: 0 0 1.1rem !important;
+  display: block;
+}
+
+/* Numbered nav */
+#menu ul { counter-reset: nav; }
+
+#menu ul li a {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-top: 1px solid var(--line);
+  padding: 0.85em 0;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+#menu ul li a::before {
+  counter-increment: nav;
+  content: "0" counter(nav);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-right: 0.9rem;
+}
+
+#menu ul li a:hover {
+  color: var(--ink);
+  padding-left: 0.35rem;
+}
+
+/* Contact list */
+ul.contact li {
+  border-top-color: var(--line);
+  font-size: 0.92rem;
+}
+ul.contact li:before { color: var(--muted); font-size: 1.15em; }
+.contact li a { color: var(--ink-soft); }
+.contact li a:hover { color: var(--ink); }
+
+#sidebar .toggle:before {
+  background-color: var(--ink);
+  color: var(--on-ink);
+}
+
+.features article .icon:before { color: var(--ink); }
+
+ul.pagination li > .page.active {
+  background-color: var(--ink);
+  color: var(--on-ink) !important;
+}
+
+/* ---- Responsive ------------------------------------------------------ */
+@media screen and (max-width: 1280px) {
+  #main > .inner { padding: 3rem 2.25rem 3.5rem; }
+  .project-grid { gap: 1.25rem; }
+}
+
+@media screen and (max-width: 980px) {
+  .project-grid { grid-template-columns: 1fr; }
+  #banner { flex-direction: column-reverse; }
+  #banner .image { margin: 0 0 2rem; width: 100%; }
+}
+
+@media screen and (max-width: 736px) {
+  body, input, select, textarea { font-size: 15px; }
+  #main > .inner { padding: 2.25rem 1.5rem 3rem; }
+  #banner h1 { font-size: 2.6rem; }
+  #main section > header.major > :last-child { font-size: 1.6rem; }
+  section + section, #main > .inner > section { margin-top: 3.5rem; }
+}
